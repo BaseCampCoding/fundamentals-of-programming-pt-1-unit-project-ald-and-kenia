@@ -15,3 +15,8 @@ Tuesday: We should be able to create the outline of the code. That includes allo
 Wednesday: We'll add the more complicated bits of the code to pull the project together. This means adding a chance every time the user goes up a level, adding a bigger range of numbers for each level, different types of hints (what the number is divisible by, go higher or lower, etc)
 
 Thursday: We will clean up any unnecessary code, and rewrite some if its needed, and add any final details to the project, and test the project multiple times to make sure we're satisfied with it.
+### Students
+- Ald
+- Kenia
+
+### GitHub Repository
