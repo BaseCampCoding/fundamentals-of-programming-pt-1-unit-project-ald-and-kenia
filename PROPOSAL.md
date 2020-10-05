@@ -10,6 +10,7 @@ We used a website that gave examples of different coding projects for inspiratio
 - **Play Number Guessing Game:** The user should be able to play the guessing game and be given hints on attempting to guess the number correct. 
 - **Progress through levels:** If the user guesses the correct number with the amount of lives provided they should be able to move on to a more complex level. 
 - **Lives:** The user should be given three lives at the start of the initial game. If they cannot guess the number with 3 lives it will be "Game Over." If the user gets the      number correct, the lives will transfor and add one for winning that level. 
+- **Hints:** The game will display hints for the user to have a better chance at guessing the number correctly. For example, "Incorrect, Too Low" or "Incorrect, Too High".
 - **Win or Lose** The user will be given a message at the end of the game displaying whether they "Won" or "Incorrect, Game Over". 
 
 ### Daily Goals
