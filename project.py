@@ -1,3 +1,2 @@
-project.py
-hello world
-hi
+# project.py
+# hello world
