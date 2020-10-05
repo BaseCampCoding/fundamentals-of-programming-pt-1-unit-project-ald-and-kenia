@@ -27,6 +27,7 @@ def level_two():
     """ (int) -> int:
 
     """ 
+    guess = int(input("enter a number from 1 to 10: "))
     num = random.randint(1,20)
     lives = 4 
     while num in range(1,20):
@@ -37,10 +38,13 @@ def level_two():
             print("that number was too high! take another shot")
             lives -= 1
             print("lives:" +str(lives))
+            guess = int(input("enter a number from 1 to 10: "))
         else: 
             print("that number is too low! try again")
             lives -= 1 
             print("lives:" +str(lives))
+            guess = int(input("enter a number from 1 to 10: "))
+level_two()
 
 
 
