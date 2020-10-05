@@ -20,6 +20,11 @@ def level_one():
         lives -= 1
         print("lives:" +str(lives))
 
+def level_two():
+    """ (int) -> int:
+
+    """ 
+    num = random.randint(1,20)
 
 
 
