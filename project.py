@@ -25,8 +25,19 @@ def level_two():
 
     """ 
     num = random.randint(1,20)
-
-
+    lives = 4 
+    while num in range(1,20):
+        if guess == num:
+        print("great job!")
+        quit()
+        elif guess > num:
+            print("that number was too high! take another shot")
+            lives -= 1
+            print("lives:" +str(lives))
+        else: 
+            print("that number is too low! try again")
+            lives -= 1 
+            print("lives:" +str(lives))
 
 
 
