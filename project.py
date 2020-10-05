@@ -1,2 +1,1 @@
-# project.py
-# hello world
+print('HelloWorld')
