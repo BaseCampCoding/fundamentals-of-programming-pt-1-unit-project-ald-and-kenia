@@ -24,9 +24,9 @@ def level_two():
     """ (int) -> int:
 
     """ 
-    num = random.randint(1,20)
+    num = random.randint(1,50)
     lives = 4 
-    while num in range(1,20):
+    while num in range(1,50):
         if guess == num:
         print("great job!")
         quit()
