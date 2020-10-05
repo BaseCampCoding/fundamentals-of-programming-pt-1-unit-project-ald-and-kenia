@@ -19,7 +19,7 @@ def level_one():
         print("Try Again! Too low")
         lives -= 1
         print("lives:" +str(lives))
-
+level_one()
 def level_two():
     """ (int) -> int:
 
