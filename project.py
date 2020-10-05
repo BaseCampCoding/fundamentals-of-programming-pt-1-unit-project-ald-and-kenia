@@ -29,7 +29,7 @@ def level_two():
     """ 
     guess = int(input("enter a number from 1 to 10: "))
     num = random.randint(1,20)
-    lives = 4 
+    lives = 4
     while num in range(1,20):
         if guess == num:
             print("great job!")
