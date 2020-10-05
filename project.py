@@ -1,0 +1,1 @@
+print('Welcome! Try to guess the correct number to win the game!')
