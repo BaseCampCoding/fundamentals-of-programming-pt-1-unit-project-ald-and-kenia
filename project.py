@@ -34,21 +34,22 @@ def level_two():
     """ 
     global lives
     print("☆ Congratulations! You made it to level two!☆")
+    print("You have " +str(lives)+ ' lives left!' )
     guess = int(input("Enter a number from 1 to 50: "))
     num2 = random.randint(1,50)
     while num2 in range(1,50):
         if guess == num2:
-            print("great job!")
+            print("Great job!")
             break
         elif guess > num2:
             lives -= 1
             print("lives:" +str(lives))
-            print("That number was too high! Take another shot!")
+            print("Too high! Take another shot!")
             guess = int(input("Enter a number from 1 to 50: "))
         else: 
             lives -= 1
             print("lives:" +str(lives))
-            print("That number is too low! Try again")
+            print("Too low! Try again")
             guess = int(input("Enter a number from 1 to 50: "))
 level_two()
 
@@ -58,21 +59,22 @@ def level_three():
     """ 
     global lives
     print("☆ Awesome! You made it to level three!☆")
+    print("You have " +str(lives)+ ' lives left!' )
     guess = int(input("Enter a number from 1 to 100: "))
     num3 = random.randint(1,100)
     while num3 in range(1,100):
         if guess == num3:
             print("Great job!")
             break
-        elif guess > num3:
+        elif guess % 2 == 0:
             lives -= 1
             print("lives:" +str(lives))
-            print("That number was too high! Take another shot")
+            print("Hint: The correct number is even ! Take another shot!")
             guess = int(input("Enter a number from 1 to 100: "))
         else: 
             lives -= 1
             print("lives:" +str(lives))
-            print("That number is too low! Try again")
+            print("Hint: The correct number is odd. Try again")
             guess = int(input("Enter a number from 1 to 100: "))
 
 level_three()
@@ -83,21 +85,22 @@ def level_four():
     """ 
     global lives
     print("☆ Great job! Welcome to level four!☆")
+    print("You have " +str(lives)+ ' lives left!' )
     guess = int(input("enter a number from 1 to 500: "))
     num4 = random.randint(1,500)
     while num4 in range(1,500):
         if guess == num4:
             print("Awesome job!")
             break
-        elif guess > num4:
+        elif guess % 2 == 0:
             lives -= 1
             print("lives:" +str(lives))
-            print("That number was too high! Try guessing lower!")
+            print("Hint: The correct number is even! Try guessing lower!")
             guess = int(input("Enter a number from 1 to 500: "))
         else: 
             lives -= 1
             print("lives:" +str(lives))
-            print("That number is too low! Try a higher number!")
+            print("The correct number is odd! Try a higher number!")
             guess = int(input("Enter a number from 1 to 500: "))
 
 level_four()
@@ -107,7 +110,8 @@ def level_five():
 
     """ 
     global lives
-    print("☆ You have made it to the Ultimate Level!☆")
+    print("You have made it to the Ultimate Level!")
+    print("You have " +str(lives)+ ' lives left!' )
     guess = int(input("enter a number from 1 to 500: "))
     num5 = random.randint(1,1000)
     while num5 in range(1,1000):
