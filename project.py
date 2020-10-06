@@ -77,3 +77,23 @@ def level_four():
             guess = int(input("Enter a number from 1 to 500: "))
 
 level_four()
+
+def level_five():
+    """ (int) -> int:
+
+    """ 
+    print("You have made it to the Ultimate Level!")
+    guess = int(input("enter a number from 1 to 500: "))
+    num5 = random.randint(1,1000)
+    while num5 in range(1,1000):
+        if guess == num5:
+            print("Awesome job!")
+            break
+        elif guess > num5:
+            print("That number was too high! Try guessing lower!")
+            guess = int(input("Enter a number from 1 to 1000: "))
+        else: 
+            print("That number is too low! Try a higher number!")
+            guess = int(input("Enter a number from 1 to 1000: "))
+
+level_five()
