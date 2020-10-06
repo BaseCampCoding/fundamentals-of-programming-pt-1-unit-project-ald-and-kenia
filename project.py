@@ -12,7 +12,7 @@ def level_one():
         if guess == num1:
             print("Correct!")
             break
-        elif guess > num1 :
+        elif guess > num1:
             print("Try again! Too high!")
             guess = int(input("Enter a number from 1 to 10: "))
         else:
@@ -83,7 +83,7 @@ def level_five():
     """ (int) -> int:
 
     """ 
-    print("You have made it to the Ultimate Level!")
+    print("☆ You have made it to the Ultimate Level!☆")
     guess = int(input("enter a number from 1 to 500: "))
     num5 = random.randint(1,1000)
     while num5 in range(1,1000):
