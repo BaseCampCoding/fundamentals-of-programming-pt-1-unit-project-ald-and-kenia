@@ -26,12 +26,24 @@ def level_one():
             lives -= 1
             print("lives:" +str(lives))
             print("Try again! Too high!")
-            guess = int(input("Enter a number from 1 to 10: "))
+            while True:
+                guess = input("Enter a number from 1 to 10: ")
+                if guess.isdigit():
+                    guess= int(guess)
+                    break
+                else:
+                    print("Please select a value of 0 or greater")
         else:
             lives -= 1
             print("lives:" +str(lives))
             print("Try Again! Too low")
-            guess = int(input("Enter a number from 1 to 10: "))
+            while True:
+                guess = input("Enter a number from 1 to 10: ")
+                if guess.isdigit():
+                    guess= int(guess)
+                    break 
+                else:
+                    print('Please select a value of 0 or greater')
 
 def level_two():
     """ (int) -> int:
@@ -57,12 +69,25 @@ def level_two():
             lives -= 1
             print("lives:" +str(lives))
             print("Too high! Take another shot!")
-            guess = int(input("Enter a number from 1 to 50: "))
+            while True:
+                guess = input("Enter a number from 1 to 50: ")
+                if guess.isdigit():
+                    guess= int(guess)
+                    break
+                else:
+                    print("Please select a value of 0 or greater")
         else: 
             lives -= 1
             print("lives:" +str(lives))
             print("Too low! Try again")
-            guess = int(input("Enter a number from 1 to 50: "))
+            while True:
+                guess = input("Enter a number from 1 to 50: ")
+                if guess.isdigit():
+                    guess= int(guess)
+                    break
+                else:
+                    print("Please select a value of 0 or greater")
+
 
 def level_three():
     """ (int) -> int:
@@ -88,13 +113,26 @@ def level_three():
             lives -= 1
             print("lives:" +str(lives))
             print("Hint: The correct number is even ! Take another shot!")
-            guess = int(input("Enter a number from 1 to 100: "))
+            while True:
+                guess = input("Enter a number from 1 to 100: ")
+                if guess.isdigit():
+                    guess= int(guess)
+                    break
+                else:
+                    print("Please select a value of 0 or greater")
+
         else: 
             lives -= 1
             print("lives:" +str(lives))
             print("Hint: The correct number is odd. Try again")
-            guess = int(input("Enter a number from 1 to 100: "))
-
+            while True:
+                guess = input("Enter a number from 1 to 10: ")
+                if guess.isdigit():
+                    guess= int(guess)
+                    break
+                else:
+                    print("Please select a value of 0 or greater")
+            
 def level_four():
     """ (int) -> int:
 
@@ -119,13 +157,25 @@ def level_four():
             lives -= 1
             print("lives:" +str(lives))
             print("Hint: The correct number is even! Try guessing lower!")
-            guess = int(input("Enter a number from 1 to 500: "))
+            while True:
+                guess = input("Enter a number from 1 to 500: ")
+                if guess.isdigit():
+                    guess= int(guess)
+                    break
+                else:
+                    print("Please select a value of 0 or greater")
         else: 
             lives -= 1
             print("lives:" +str(lives))
             print("The correct number is odd! Try a higher number!")
-            guess = int(input("Enter a number from 1 to 500: "))
-
+            while True:
+                guess = input("Enter a number from 1 to 500: ")
+                if guess.isdigit():
+                    guess= int(guess)
+                    break
+                else:
+                    print("Please select a value of 0 or greater")
+            
 def level_five():
     """ (int) -> int:
 
@@ -150,12 +200,25 @@ def level_five():
             lives -= 1
             print("lives:" +str(lives))
             print("The correct number is a divisible by 2! Try guessing lower!")
-            guess = int(input("Enter a number from 1 to 1000: "))
+            while True:
+                guess = input("Enter a number from 1 to 1000: ")
+                if guess.isdigit():
+                    guess= int(guess)
+                    break
+                else:
+                    print("Please select a value of 0 or greater")
+            
         else: 
             lives -= 1
             print("lives:" +str(lives))
             print("That number is too low! Try a higher number!")
-            guess = int(input("Enter a number from 1 to 1000: "))
+            while True:
+                guess = input("Enter a number from 1 to 1000: ")
+                if guess.isdigit():
+                    guess= int(guess)
+                    break
+                else:
+                    print("Please select a value of 0 or greater")
 while lives> 0:
     
     level_one()
@@ -172,3 +235,4 @@ while lives> 0:
     if response == 'Y':
         level_one()
     
+
