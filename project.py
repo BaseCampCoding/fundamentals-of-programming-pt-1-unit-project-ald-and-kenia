@@ -104,12 +104,8 @@ def level_five():
     """ (int) -> int:
 
     """ 
-<<<<<<< HEAD
-    print("☆ You have made it to the Ultimate Level!☆")
-=======
     global lives
     print("You have made it to the Ultimate Level!")
->>>>>>> 6beb318062f82940df3ad786662bcff6cf68811f
     guess = int(input("enter a number from 1 to 500: "))
     num5 = random.randint(1,1000)
     while num5 in range(1,1000):
