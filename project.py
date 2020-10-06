@@ -1,6 +1,7 @@
 print('Welcome! Try to guess the correct number to win the game!')
 print("For your first round, you get three chances to guess the correct number")
 import random
+level = 0 
 def level_one():
     """ (int) -> int:
 
@@ -59,4 +60,23 @@ def level_three():
         else: 
             print("that number is too low! try again")
             guess = int(input("enter a number from 1 to 100: "))
+
+
+
+def level_four():
+    """ (int) -> int:
+
+    """ 
+    guess = int(input("enter a number from 1 to 500: "))
+    num3 = random.randint(1,500)
+    while num2 in range(1,500):
+        if guess == num3:
+            print("awesome job!")
+            quit()
+        elif guess > num3:
+            print("that number was too high! Try guessing lower!")
+            guess = int(input("enter a number from 1 to 500: "))
+        else: 
+            print("that number is too low! try a higher number!")
+            guess = int(input("enter a number from 1 to 500: "))
 
