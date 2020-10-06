@@ -6,7 +6,7 @@ def level_one():
 
     """
     guess = int(input("enter a number from 1 to 10: "))
-    num=random.randint(1,10)
+    num1=random.randint(1,10)
     lives = 3 
     while num in range(1,10):
         if guess == num:
@@ -28,24 +28,20 @@ def level_two():
 
     """ 
     guess = int(input("enter a number from 1 to 10: "))
-    num = random.randint(1,50)
-    lives = 4 
+    num2 = random.randint(1,50)
     while num in range(1,50):
         if guess == num:
             print("great job!")
             quit()
         elif guess > num:
             print("that number was too high! take another shot")
-            lives -= 1
-            print("lives:" +str(lives))
             guess = int(input("enter a number from 1 to 50: "))
         else: 
             print("that number is too low! try again")
-            lives -= 1 
-            print("lives:" +str(lives))
             guess = int(input("enter a number from 1 to 50: "))
-level_two()
 
+if guess == num1:
+    level_two
 
 
 
