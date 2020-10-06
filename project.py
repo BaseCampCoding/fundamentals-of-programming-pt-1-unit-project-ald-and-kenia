@@ -24,7 +24,7 @@ def level_two():
     """ (int) -> int:
 
     """ 
-    print("Congratulations! You made it to level two!")
+    print("☆ Congratulations! You made it to level two!☆")
     guess = int(input("Enter a number from 1 to 50: "))
     num2 = random.randint(1,50)
     while num2 in range(1,50):
@@ -43,6 +43,7 @@ def level_three():
     """ (int) -> int:
 
     """ 
+    print("☆ Awesome! You made it to level three!☆")
     guess = int(input("Enter a number from 1 to 100: "))
     num3 = random.randint(1,100)
     while num3 in range(1,100):
@@ -62,6 +63,7 @@ def level_four():
     """ (int) -> int:
 
     """ 
+    print("☆ Great job! Welcome to level four!☆")
     guess = int(input("enter a number from 1 to 500: "))
     num4 = random.randint(1,500)
     while num4 in range(1,500):
