@@ -3,6 +3,8 @@ print("For your first round, you get three chances to guess the correct number."
 print('Win the level and win a life. Guess incorrect and its Game Over!')
 import random
 lives=3
+
+
 def level_one():
     """ 
 
