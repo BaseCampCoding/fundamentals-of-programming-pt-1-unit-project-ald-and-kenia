@@ -3,7 +3,7 @@ print("For your first round, you get three chances to guess the correct number."
 print('Win the level and win a life. Guess incorrect and its Game Over!')
 import random
 lives=3
-
+break
 def level_one():
     """ 
 
@@ -33,6 +33,15 @@ def level_one():
             print("Try Again! Too low")
             guess = int(input("Enter a number from 1 to 10: "))
 
+    while lives == 0:
+        print("GAME OVER")
+        response = input("Do you want to play again? Y/N: ")
+    if response != 'Y':
+        quit()
+    if response == 'Y':
+        level_one()
+
+#level_one()
 def level_two():
     """ (int) -> int:
 
@@ -64,6 +73,12 @@ def level_two():
             print("Too low! Try again")
             guess = int(input("Enter a number from 1 to 50: "))
 
+        if lives == 0:
+            print("GAME OVER")
+            quit()
+    
+
+# level_two()
 def level_three():
     """ (int) -> int:
 
@@ -95,6 +110,12 @@ def level_three():
             print("Hint: The correct number is odd. Try again")
             guess = int(input("Enter a number from 1 to 100: "))
 
+        if lives == 0:
+            print("GAME OVER")
+            quit()
+    
+
+# level_three()
 def level_four():
     """ (int) -> int:
 
@@ -126,6 +147,12 @@ def level_four():
             print("The correct number is odd! Try a higher number!")
             guess = int(input("Enter a number from 1 to 500: "))
 
+        if lives == 0:
+            print("GAME OVER")
+            quit()
+    
+
+# level_four()
 def level_five():
     """ (int) -> int:
 
@@ -156,7 +183,14 @@ def level_five():
             print("lives:" +str(lives))
             print("That number is too low! Try a higher number!")
             guess = int(input("Enter a number from 1 to 1000: "))
-while lives> 0:
+
+        if lives == 0:
+            print("GAME OVER")
+            quit()
+
+
+# level_five()
+while lives > 0:
     
     level_one()
     level_two()
@@ -164,7 +198,7 @@ while lives> 0:
     level_four()
     level_five()
 
-    if lives == 0:
+    while lives == 0:
         print("GAME OVER")
     response = input("Do you want to play again? Y/N: ")
     if response != 'Y':
