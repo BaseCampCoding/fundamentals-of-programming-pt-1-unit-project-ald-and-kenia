@@ -20,11 +20,11 @@ def level_one():
             guess = int(input("Enter a number from 1 to 10: "))
 
 level_one()
-print("Congratulations! You made it to level two!")
 def level_two():
     """ (int) -> int:
 
     """ 
+    print("Congratulations! You made it to level two!")
     guess = int(input("Enter a number from 1 to 50: "))
     num2 = random.randint(1,50)
     while num2 in range(1,50):
