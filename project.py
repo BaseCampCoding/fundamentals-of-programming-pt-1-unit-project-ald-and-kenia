@@ -20,11 +20,12 @@ def level_one():
             guess = int(input("Enter a number from 1 to 10: "))
 
 level_one()
-print("Congratulations! You made it to level two!")
+
 def level_two():
     """ (int) -> int:
 
     """ 
+    print("Congratulations! You made it to level two!")
     guess = int(input("Enter a number from 1 to 50: "))
     num2 = random.randint(1,50)
     while num2 in range(1,50):
@@ -45,7 +46,7 @@ def level_three():
     """ 
     guess = int(input("Enter a number from 1 to 100: "))
     num3 = random.randint(1,100)
-    while num2 in range(1,100):
+    while num3 in range(1,100):
         if guess == num3:
             print("Great job!")
             break
@@ -56,22 +57,23 @@ def level_three():
             print("That number is too low! Try again")
             guess = int(input("Enter a number from 1 to 100: "))
 
-
+level_three()
 
 def level_four():
     """ (int) -> int:
 
     """ 
     guess = int(input("enter a number from 1 to 500: "))
-    num3 = random.randint(1,500)
-    while num2 in range(1,500):
-        if guess == num3:
-            print("awesome job!")
+    num4 = random.randint(1,500)
+    while num4 in range(1,500):
+        if guess == num4:
+            print("Awesome job!")
             break
-        elif guess > num3:
-            print("that number was too high! Try guessing lower!")
-            guess = int(input("enter a number from 1 to 500: "))
+        elif guess > num4:
+            print("That number was too high! Try guessing lower!")
+            guess = int(input("Enter a number from 1 to 500: "))
         else: 
-            print("that number is too low! try a higher number!")
-            guess = int(input("enter a number from 1 to 500: "))
+            print("That number is too low! Try a higher number!")
+            guess = int(input("Enter a number from 1 to 500: "))
 
+level_four()
