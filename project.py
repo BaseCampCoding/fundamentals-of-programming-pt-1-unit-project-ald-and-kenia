@@ -38,12 +38,12 @@ def level_two():
             print("that number was too high! take another shot")
             lives -= 1
             print("lives:" +str(lives))
-            guess = int(input("enter a number from 1 to 10: "))
+            guess = int(input("enter a number from 1 to 50: "))
         else: 
             print("that number is too low! try again")
             lives -= 1 
             print("lives:" +str(lives))
-            guess = int(input("enter a number from 1 to 10: "))
+            guess = int(input("enter a number from 1 to 50: "))
 level_two()
 
 
