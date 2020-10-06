@@ -146,10 +146,10 @@ def level_five():
             print("Awesome job!")
             lives += 1
             break
-        elif guess > num5:
+        elif guess % 2 == 0:
             lives -= 1
             print("lives:" +str(lives))
-            print("That number was too high! Try guessing lower!")
+            print("The correct number is a divisible by 2! Try guessing lower!")
             guess = int(input("Enter a number from 1 to 1000: "))
         else: 
             lives -= 1
