@@ -26,8 +26,15 @@ def level_one():
             print("lives:" +str(lives))
             print("Try Again! Too low")
             guess = int(input("Enter a number from 1 to 10: "))
-
-level_one()
+       
+        while lives == 0:
+            print("GAME OVER")
+            response = input("Do you want to play again? Y/N:")
+            if response != 'Y':
+                quit()
+            if response == 'Y':
+                level_one()
+#level_one()
 def level_two():
     """ (int) -> int:
 
@@ -51,7 +58,11 @@ def level_two():
             print("lives:" +str(lives))
             print("Too low! Try again")
             guess = int(input("Enter a number from 1 to 50: "))
-level_two()
+        
+        if lives == 0:
+            print("GAME OVER")
+            quit()
+#level_two()
 
 def level_three():
     """ (int) -> int:
@@ -76,8 +87,12 @@ def level_three():
             print("lives:" +str(lives))
             print("Hint: The correct number is odd. Try again")
             guess = int(input("Enter a number from 1 to 100: "))
+        
+        if lives == 0:
+            print("GAME OVER")
+            quit()
 
-level_three()
+#level_three()
 
 def level_four():
     """ (int) -> int:
@@ -103,7 +118,10 @@ def level_four():
             print("The correct number is odd! Try a higher number!")
             guess = int(input("Enter a number from 1 to 500: "))
 
-level_four()
+        if lives == 0:
+            print("GAME OVER")
+            quit()
+#level_four()
 
 def level_five():
     """ (int) -> int:
@@ -128,5 +146,16 @@ def level_five():
             print("lives:" +str(lives))
             print("That number is too low! Try a higher number!")
             guess = int(input("Enter a number from 1 to 1000: "))
+        
+        if lives == 0:
+            print("GAME OVER")
+            quit()
 
-level_five()
+#level_five()
+
+while lives !=0:
+    level_one()
+    level_two()
+    level_three()
+    level_four()
+    level_five()
