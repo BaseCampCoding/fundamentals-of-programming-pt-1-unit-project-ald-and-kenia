@@ -10,7 +10,6 @@ def level_one():
     """
     global lives
     print("☆ LEVEL ONE!☆")
-    lives = 3
     while True:
         guess = input("Enter a number from 1 to 10: ")
         if guess.isdigit():
@@ -54,6 +53,7 @@ def level_one():
             if response != 'Y':
                 quit()
             if response == 'Y':
+                lives = 3
                 starting_game()
 
 
@@ -63,7 +63,7 @@ def level_two():
     """ 
     global lives
     print("☆ LEVEL TWO!☆")
-    lives = 3
+    lives += 1
     while True:
         guess = input("Enter a number from 1 to 50: ")
         if guess.isdigit():
@@ -115,7 +115,7 @@ def level_three():
     """ 
     global lives
     print("☆ LEVEL THREE!☆")
-    lives = 3
+    lives += 1
     while True:
         guess = input("Enter a number from 1 to 100: ")
         if guess.isdigit():
@@ -169,7 +169,7 @@ def level_four():
     """ 
     global lives
     print("☆ LEVEL FOUR!☆")
-    lives = 3
+    lives += 1
     while True:
         guess = input("Enter a number from 1 to 500: ")
         if guess.isdigit():
@@ -212,6 +212,7 @@ def level_four():
             if response != 'Y':
                 quit()
             if response == 'Y':
+                lives = 3
                 starting_game()
                 
 def level_five():
@@ -220,7 +221,7 @@ def level_five():
     """ 
     global lives
     print("☆ LEVEL FIVE!☆")
-    lives = 3
+    lives += 1
     while True:
         guess = input("Enter a number from 1 to 1000: ")
         if guess.isdigit():
@@ -264,6 +265,7 @@ def level_five():
             if response != 'Y':
                 quit()
             if response == 'Y':
+                lives = 3
                 starting_game()
                 
 
