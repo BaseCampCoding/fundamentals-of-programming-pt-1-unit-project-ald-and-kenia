@@ -1,5 +1,4 @@
-print('Welcome! Try to guess the correct number to win the game!')
-print("For your first round, you get three chances to guess the correct number.")
+print('Welcome to the hardest game ever! Try to guess the correct number to win the game!')
 print('Win the level and win a life. Guess incorrect and its Game Over!')
 print("WARNING! THIS GAME IS EXTREMELY HARD.")
 import random
@@ -10,6 +9,7 @@ def level_one():
     """
     global lives
     print("☆ LEVEL ONE!☆")
+    print("For your first round, you get three chances to guess the correct number.")
     while True:
         guess = input("Enter a number from 1 to 10: ")
         if guess.isdigit():
@@ -53,7 +53,7 @@ def level_one():
             if response != 'Y':
                 quit()
             if response == 'Y':
-                level_one()
+                starting_game()
 
 
 def level_two():
@@ -106,8 +106,8 @@ def level_two():
             if response != 'Y':
                 quit()
             if response == 'Y':
-                level_one()
-                level_two()
+                starting_game()
+                
     
 def level_three():
     """ (int) -> int:
@@ -159,9 +159,7 @@ def level_three():
             if response != 'Y':
                 quit()
             if response == 'Y':
-                level_one()
-                level_two()
-                level_three()
+                starting_game()
     
 
             
@@ -214,10 +212,7 @@ def level_four():
             if response != 'Y':
                 quit()
             if response == 'Y':
-                level_one()
-                level_two()
-                level_three()   
-                level_four()
+                starting_game()
 
 def level_five():
     """ (int) -> int:
@@ -269,9 +264,7 @@ def level_five():
             if response != 'Y':
                 quit()
             if response == 'Y':
-                level_one()
-                level_two()
-                level_three()
+                starting_game()
 
 def starting_game():
     print("What level do you want to start at?")
