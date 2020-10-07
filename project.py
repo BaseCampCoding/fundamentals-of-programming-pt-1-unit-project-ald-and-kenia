@@ -8,6 +8,7 @@ def level_one():
 
     """
     global lives
+    print("☆ LEVEL ONE!☆")
     while True:
         guess = input("Enter a number from 1 to 10: ")
         if guess.isdigit():
@@ -58,7 +59,7 @@ def level_two():
 
     """ 
     global lives
-    print("☆LEVEL TWO!☆")
+    print("☆ LEVEL TWO!☆")
     print("A live was added. You have " +str(lives)+ ' lives left!' )
     while True:
         guess = input("Enter a number from 1 to 50: ")
@@ -111,7 +112,7 @@ def level_three():
 
     """ 
     global lives
-    print("☆LEVEL THREE!☆")
+    print("☆ LEVEL THREE!☆")
     print("A live was added. You have " +str(lives)+ ' lives left!' )
     while True:
         guess = input("Enter a number from 1 to 100: ")
@@ -167,7 +168,7 @@ def level_four():
 
     """ 
     global lives
-    print("☆LEVEL FOUR!☆")
+    print("☆ LEVEL FOUR!☆")
     print("A live was added. You have " +str(lives)+ ' lives left!' )
     while True:
         guess = input("Enter a number from 1 to 500: ")
@@ -204,13 +205,23 @@ def level_four():
                     break
                 else:
                     print("Please select a value of 0 or greater")
-            
+        while lives == 0:
+            print("GAME OVER")
+            response = input("Do you want to play again? Y/N: ")
+            if response != 'Y':
+                quit()
+            if response == 'Y':
+                level_one()
+                level_two()
+                level_three()   
+                level_four()
+
 def level_five():
     """ (int) -> int:
 
     """ 
     global lives
-    print("☆LEVEL FIVE!☆")
+    print("☆ LEVEL FIVE!☆")
     print("A live was added. You have " +str(lives)+ ' lives left!' )
     while True:
         guess = input("Enter a number from 1 to 1000: ")
@@ -248,6 +259,16 @@ def level_five():
                     break
                 else:
                     print("Please select a value of 0 or greater")
+        
+        while lives == 0:
+            print("GAME OVER")
+            response = input("Do you want to play again? Y/N: ")
+            if response != 'Y':
+                quit()
+            if response == 'Y':
+                level_one()
+                level_two()
+                level_three()
 
 while lives == 0:
 
