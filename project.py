@@ -1,4 +1,5 @@
-print('Welcome to the hardest game ever! Try to guess the correct number to win the game!')
+print('Welcome! Try to guess the correct number to win the game!')
+print("For your first round, you get three chances to guess the correct number.")
 print('Win the level and win a life. Guess incorrect and its Game Over!')
 print("WARNING! THIS GAME IS EXTREMELY HARD.")
 import random
@@ -9,7 +10,6 @@ def level_one():
     """
     global lives
     print("☆ LEVEL ONE!☆")
-    print(" You have " +str(lives)+ ' lives left!' )
     while True:
         guess = input("Enter a number from 1 to 10: ")
         if guess.isdigit():
@@ -63,7 +63,7 @@ def level_two():
     """ 
     global lives
     print("☆ LEVEL TWO!☆")
-    print(" You have " +str(lives)+ ' lives left!' )
+    lives += 1
     while True:
         guess = input("Enter a number from 1 to 50: ")
         if guess.isdigit():
@@ -160,7 +160,6 @@ def level_three():
             if response != 'Y':
                 quit()
             if response == 'Y':
-                lives = 3
                 starting_game()
                 
 
@@ -240,7 +239,11 @@ def level_five():
         elif guess % 2 == 0:
             lives -= 1
             print("lives:" +str(lives))
-            print("The correct number is a divisible by 2! Try guessing lower!")
+            reply = input("Do you want a hint? Y/N:")
+            if reply == 'Y':
+                print("The correct number is a divisible by 2! Try guessing lower!")
+            #if reply == 'N':
+                #lives += 1
             while True:
                 guess = input("Enter a number from 1 to 1000: ")
                 if guess.isdigit():
@@ -308,9 +311,8 @@ starting_game()
 while lives == 0:
 
     print("GAME OVER")
-    response = input("Do you want to play again? Y/N: ").upper
-    if response != 'Y':
+    response = input("Do you want to play again? Y/N: ").lower
+    if response != 'y':
         quit()
-    if response == 'Y':
-        lives = 3
+    if response == 'y':
         starting_game()
