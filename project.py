@@ -107,6 +107,7 @@ def level_two():
             if response != 'Y':
                 quit()
             if response == 'Y':
+                lives = 3
                 starting_game()
     
 def level_three():
@@ -159,6 +160,7 @@ def level_three():
             if response != 'Y':
                 quit()
             if response == 'Y':
+                lives = 3
                 starting_game()
                 
 
