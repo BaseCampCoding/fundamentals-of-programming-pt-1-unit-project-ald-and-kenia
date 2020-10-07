@@ -241,6 +241,7 @@ while lives == 0:
         level_one()
 print("What level do you want to start at?")
 start_level=int(input("Level [1] - beginner, Level [2] - easy, Level [3] - intermediate, Level [4]- hard, Level [5] - extreme"))
+
 if start_level == 1:
     level_one()
     level_two()
