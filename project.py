@@ -1,6 +1,16 @@
 print('Welcome to the hardest game ever! Try to guess the correct number to win the game!')
 print('Win the level and win a life. Guess incorrect and its Game Over!')
 print("WARNING! THIS GAME IS EXTREMELY HARD.")
+import time
+def time_convert(sec):
+        mins = sec // 60
+        sec = sec % 60
+        print("Time Lapsed = {0}:{1}".format(int(mins),sec))
+
+start= input("Press Enter to start the timer")
+start_time = time.time()
+
+
 import random
 lives=3
 def level_one():
@@ -9,14 +19,14 @@ def level_one():
     """
     global lives
     print("☆ LEVEL ONE!☆")
-    print(" You have " +str(lives)+ ' lives left!' )
+    print(" You have " +str(lives)+ ' lives left!\n' )
     while True:
-        guess = input("Enter a number from 1 to 10: ")
+        guess = input("\n Enter a number from 1 to 10:  ")
         if guess.isdigit():
             guess= int(guess)
             break
         else:
-            print('Please select a value of 0 or greater')
+            print('Please select a value of 0 or greater\n')
     num1=random.randint(1,10)
     while num1 in range(1,10):
         if guess == num1:
@@ -29,7 +39,7 @@ def level_one():
             print("lives:" +str(lives))
             print("Try again! Too high!")
             while True:
-                guess = input("Enter a number from 1 to 10: ")
+                guess = input("\n Enter a number from 1 to 10: ")
                 if guess.isdigit():
                     guess= int(guess)
                     break
@@ -48,7 +58,10 @@ def level_one():
                     print('Please select a value of 0 or greater')
 
         while lives == 0:
+            end_time = time.time()
             print("GAME OVER. The correct number was " +str(num1))
+            time_lapsed = end_time - start_time
+            time_convert(time_lapsed)
             response = input("Do you want to play again? Y/N: ")
             if response != 'Y':
                 quit()
@@ -102,7 +115,10 @@ def level_two():
 
 
         while lives == 0:
+            end_time = time.time()
             print("GAME OVER. The correct number was " +str(num2))
+            time_lapsed = end_time - start_time
+            time_convert(time_lapsed)
             response = input("Do you want to play again? Y/N: ")
             if response != 'Y':
                 quit()
@@ -116,6 +132,7 @@ def level_three():
     """ 
     global lives
     print("☆ LEVEL THREE!☆")
+    print(" You have " +str(lives)+ ' lives left!' )
     lives += 1
     while True:
         guess = input("Enter a number from 1 to 100: ")
@@ -126,7 +143,7 @@ def level_three():
             print('Please select a value of 0 or greater')
     num3 = random.randint(1,100)
     while num3 in range(1,100):
-        if guess == num3:
+        if num3 == num3:
             print("Great job!")
             lives += 1
             break
@@ -155,7 +172,10 @@ def level_three():
                     print("Please select a value of 0 or greater")
 
         while lives == 0:
+            end_time = time.time()
             print("GAME OVER. The correct number was " +str(num3))
+            time_lapsed = end_time - start_time
+            time_convert(time_lapsed)
             response = input("Do you want to play again? Y/N: ")
             if response != 'Y':
                 quit()
@@ -171,6 +191,7 @@ def level_four():
     """ 
     global lives
     print("☆ LEVEL FOUR!☆")
+    print(" You have " +str(lives)+ ' lives left!' )
     lives += 1
     while True:
         guess = input("Enter a number from 1 to 500: ")
@@ -185,7 +206,7 @@ def level_four():
             print("Awesome job! A life was added")
             lives += 1
             break
-        elif guess % 2 == 0:
+        elif num4 % 2 == 0:
             lives -= 1
             print("lives:" +str(lives))
             print("Hint: The correct number is even! Try guessing lower!")
@@ -209,7 +230,10 @@ def level_four():
                     print("Please select a value of 0 or greater")
 
         while lives == 0:
-            print("GAME OVER")
+            end_time = time.time()
+            print("GAME OVER. The correct number was " +str(num4))
+            time_lapsed = end_time - start_time
+            time_convert(time_lapsed)
             response = input("Do you want to play again? Y/N: ")
             if response != 'Y':
                 quit()
@@ -223,6 +247,7 @@ def level_five():
     """ 
     global lives
     print("☆ LEVEL FIVE!☆")
+    print(" You have " +str(lives)+ ' lives left!' )
     lives += 1
     while True:
         guess = input("Enter a number from 1 to 1000: ")
@@ -262,7 +287,10 @@ def level_five():
                     print("Please select a value of 0 or greater")
         
         while lives == 0:
-            print("GAME OVER")
+            end_time = time.time()
+            print("GAME OVER. The correct number was " +str(num5))
+            time_lapsed = end_time - start_time
+            time_convert(time_lapsed)
             response = input("Do you want to play again? Y/N: ")
             if response != 'Y':
                 quit()
@@ -314,3 +342,9 @@ while lives == 0:
     if response == 'Y':
         lives = 3
         starting_game()
+    input("Press Enter to stop")
+    end_time = time.time() 
+
+    
+    time_lapsed = end_time - start_time
+    time_convert(time_lapsed)
