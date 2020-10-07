@@ -3,7 +3,6 @@ print("For your first round, you get three chances to guess the correct number."
 print('Win the level and win a life. Guess incorrect and its Game Over!')
 import random
 lives=3
-
 def level_one():
     """ 
 
@@ -54,7 +53,6 @@ def level_one():
                 level_one()
 
 
-#level_one()
 def level_two():
     """ (int) -> int:
 
@@ -108,8 +106,6 @@ def level_two():
                 level_one()
                 level_two()
     
-
-# level_two()
 def level_three():
     """ (int) -> int:
 
@@ -252,20 +248,34 @@ def level_five():
                     break
                 else:
                     print("Please select a value of 0 or greater")
-while lives> 0:
-    
+
+while lives == 0:
+
+    print("GAME OVER")
+    response = input("Do you want to play again? Y/N: ").upper
+    if response != 'Y':
+        quit()
+    if response == 'Y':
+        level_one()
+print("What level do you want to start at?")
+start_level=int(input("Level [1] - beginner, Level [2] - easy, Level [3] - intermediate, Level [4]- hard, Level [5] - extreme"))
+if start_level == 1:
     level_one()
     level_two()
     level_three()
     level_four()
     level_five()
-
-    while lives == 0:
-        print("GAME OVER")
-    response = input("Do you want to play again? Y/N: ")
-    if response != 'Y':
-        quit()
-    if response == 'Y':
-        level_one()
-    
-
+if start_level == 2:
+    level_two()
+    level_three()
+    level_four()
+    level_five()
+if start_level == 3:
+    level_three()
+    level_four()
+    level_five()
+if start_level == 4:
+    level_four()
+    level_five()
+if start_level == 5:
+    level_five()
