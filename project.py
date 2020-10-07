@@ -44,21 +44,22 @@ def level_one():
                 else:
                     print('Please select a value of 0 or greater')
 
-    while lives == 0:
-        print("GAME OVER")
-        response = input("Do you want to play again? Y/N: ")
-    if response != 'Y':
-        quit()
-    if response == 'Y':
-        level_one()
+        while lives == 0:
+            print("GAME OVER")
+            response = input("Do you want to play again? Y/N: ")
+            if response != 'Y':
+                quit()
+            if response == 'Y':
+                level_one()
+
 
 def level_two():
     """ (int) -> int:
 
     """ 
     global lives
-    print("☆ Congratulations! You made it to level two!☆")
-    print("A life was added. You have " +str(lives)+ ' lives left!' )
+    print("☆LEVEL TWO!☆")
+    print("A live was added. You have " +str(lives)+ ' lives left!' )
     while True:
         guess = input("Enter a number from 1 to 50: ")
         if guess.isdigit():
@@ -96,17 +97,22 @@ def level_two():
                     print("Please select a value of 0 or greater")
 
 
-        if lives == 0:
+        while lives == 0:
             print("GAME OVER")
-            quit()
+            response = input("Do you want to play again? Y/N: ")
+            if response != 'Y':
+                quit()
+            if response == 'Y':
+                level_one()
+                level_two()
     
 def level_three():
     """ (int) -> int:
 
     """ 
     global lives
-    print("☆ Awesome! You made it to level three!☆")
-    print("A life was added. You have " +str(lives)+ ' lives left!' )
+    print("☆LEVEL THREE!☆")
+    print("A live was added. You have " +str(lives)+ ' lives left!' )
     while True:
         guess = input("Enter a number from 1 to 100: ")
         if guess.isdigit():
@@ -137,20 +143,32 @@ def level_three():
             print("lives:" +str(lives))
             print("Hint: The correct number is odd. Try again")
             while True:
-                guess = input("Enter a number from 1 to 10: ")
+                guess = input("Enter a number from 1 to 100: ")
                 if guess.isdigit():
                     guess= int(guess)
                     break
                 else:
                     print("Please select a value of 0 or greater")
+
+        while lives == 0:
+            print("GAME OVER")
+            response = input("Do you want to play again? Y/N: ")
+            if response != 'Y':
+                quit()
+            if response == 'Y':
+                level_one()
+                level_two()
+                level_three()
+    
+
             
 def level_four():
     """ (int) -> int:
 
     """ 
     global lives
-    print("☆ Great job! Welcome to level four!☆")
-    print("A life was added. You have " +str(lives)+ ' lives left!' )
+    print("☆LEVEL FOUR!☆")
+    print("A live was added. You have " +str(lives)+ ' lives left!' )
     while True:
         guess = input("Enter a number from 1 to 500: ")
         if guess.isdigit():
@@ -192,8 +210,8 @@ def level_five():
 
     """ 
     global lives
-    print("You have made it to the Ultimate Level!")
-    print("A life was added. You have " +str(lives)+ ' lives left!' )
+    print("☆LEVEL FIVE!☆")
+    print("A live was added. You have " +str(lives)+ ' lives left!' )
     while True:
         guess = input("Enter a number from 1 to 1000: ")
         if guess.isdigit():
