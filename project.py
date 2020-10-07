@@ -53,6 +53,7 @@ def level_one():
             if response != 'Y':
                 quit()
             if response == 'Y':
+                lives =3
                 starting_game()
 
 
@@ -106,6 +107,7 @@ def level_two():
             if response != 'Y':
                 quit()
             if response == 'Y':
+                lives = 3
                 starting_game()
                 
     
@@ -159,6 +161,7 @@ def level_three():
             if response != 'Y':
                 quit()
             if response == 'Y':
+                lives=3
                 starting_game()
     
 
@@ -212,6 +215,7 @@ def level_four():
             if response != 'Y':
                 quit()
             if response == 'Y':
+                lives =3
                 starting_game()
 
 def level_five():
@@ -264,6 +268,7 @@ def level_five():
             if response != 'Y':
                 quit()
             if response == 'Y':
+                lives =3
                 starting_game()
 
 def starting_game():
@@ -303,8 +308,9 @@ starting_game()
 while lives == 0:
 
     print("GAME OVER")
-    response = input("Do you want to play again? Y/N: ").lower
-    if response != 'y':
+    response = input("Do you want to play again? Y/N: ").upper
+    if response != 'Y':
         quit()
-    if response == 'y':
+    if response == 'Y':
+        lives = 3
         starting_game()
