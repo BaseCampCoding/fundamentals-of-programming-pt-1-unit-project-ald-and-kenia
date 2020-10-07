@@ -19,7 +19,8 @@ def level_one():
     num1=random.randint(1,10)
     while num1 in range(1,10):
         if guess == num1:
-            print("Correct!")
+            print("Correct! A life was added.")
+            
             lives += 1
             break
         elif guess > num1 :
@@ -71,7 +72,7 @@ def level_two():
     num2 = random.randint(1,50)
     while num2 in range(1,50):
         if guess == num2:
-            print("Great job!")
+            print("Great job! A life was added")
             lives+=1
             break
         elif guess > num2:
@@ -180,7 +181,7 @@ def level_four():
     num4 = random.randint(1,500)
     while num4 in range(1,500):
         if guess == num4:
-            print("Awesome job!")
+            print("Awesome job! A life was added")
             lives += 1
             break
         elif guess % 2 == 0:
@@ -205,6 +206,7 @@ def level_four():
                     break
                 else:
                     print("Please select a value of 0 or greater")
+                    
         while lives == 0:
             print("GAME OVER")
             response = input("Do you want to play again? Y/N: ")
@@ -233,7 +235,7 @@ def level_five():
     num5 = random.randint(1,1000)
     while num5 in range(1,1000):
         if guess == num5:
-            print("Awesome job!")
+            print("You win!")
             lives += 1
             break
         elif guess % 2 == 0:
@@ -270,33 +272,45 @@ def level_five():
                 level_two()
                 level_three()
 
+def starting_game():
+    print("What level do you want to start at?")
+    print("Level [1] - beginner, Level [2] - easy, Level [3] - intermediate, Level [4]- hard, Level [5] - extreme")
+    start_level= input(">")
+    while True:
+        if start_level.isdigit():
+            start_level= int(start_level)
+            break
+        else:
+            print("Please enter a digit")
+            print("Level [1] - beginner, Level [2] - easy, Level [3] - intermediate, Level [4]- hard, Level [5] - extreme")
+            start_level= input(">")
+    if start_level == 1:
+        level_one()
+        level_two()
+        level_three()
+        level_four()
+        level_five()
+    if start_level == 2:
+        level_two()
+        level_three()
+        level_four()
+        level_five()
+    if start_level == 3:
+        level_three()
+        level_four()
+        level_five()
+    if start_level == 4:
+        level_four()
+        level_five()
+    if start_level == 5:
+        level_five()
+starting_game()
+
 while lives == 0:
 
     print("GAME OVER")
-    response = input("Do you want to play again? Y/N: ").upper
-    if response != 'Y':
+    response = input("Do you want to play again? Y/N: ").lower
+    if response != 'y':
         quit()
-    if response == 'Y':
-        level_one()
-print("What level do you want to start at?")
-start_level=int(input("Level [1] - beginner, Level [2] - easy, Level [3] - intermediate, Level [4]- hard, Level [5] - extreme"))
-if start_level == 1:
-    level_one()
-    level_two()
-    level_three()
-    level_four()
-    level_five()
-if start_level == 2:
-    level_two()
-    level_three()
-    level_four()
-    level_five()
-if start_level == 3:
-    level_three()
-    level_four()
-    level_five()
-if start_level == 4:
-    level_four()
-    level_five()
-if start_level == 5:
-    level_five()
+    if response == 'y':
+        starting_game()
