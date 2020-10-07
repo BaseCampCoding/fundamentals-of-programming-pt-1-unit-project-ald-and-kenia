@@ -1,6 +1,7 @@
 print('Welcome! Try to guess the correct number to win the game!')
 print("For your first round, you get three chances to guess the correct number.")
 print('Win the level and win a life. Guess incorrect and its Game Over!')
+print("WARNING! THIS GAME IS EXTREMELY HARD.")
 import random
 lives=3
 def level_one():
@@ -253,7 +254,7 @@ def level_five():
 def starting_game():
     print("What level do you want to start at?")
     print("Level [1] - beginner, Level [2] - easy, Level [3] - intermediate, Level [4]- hard, Level [5] - extreme")
-    start_level= input(">")
+    start_level= input("> ")
     while True:
         if start_level.isdigit():
             start_level= int(start_level)
@@ -261,7 +262,7 @@ def starting_game():
         else:
             print("Please enter a digit")
             print("Level [1] - beginner, Level [2] - easy, Level [3] - intermediate, Level [4]- hard, Level [5] - extreme")
-            start_level= input(">")
+            start_level= input("> ")
     if start_level == 1:
         level_one()
         level_two()
