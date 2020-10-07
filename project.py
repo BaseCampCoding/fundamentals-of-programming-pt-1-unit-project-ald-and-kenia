@@ -9,7 +9,7 @@ def level_one():
     """
     global lives
     print("☆ LEVEL ONE!☆")
-    lives = 3
+    print(" You have " +str(lives)+ ' lives left!' )
     while True:
         guess = input("Enter a number from 1 to 10: ")
         if guess.isdigit():
@@ -53,6 +53,7 @@ def level_one():
             if response != 'Y':
                 quit()
             if response == 'Y':
+                lives= 3
                 starting_game()
 
 
@@ -62,7 +63,7 @@ def level_two():
     """ 
     global lives
     print("☆ LEVEL TWO!☆")
-    lives = 3
+    print(" You have " +str(lives)+ ' lives left!' )
     while True:
         guess = input("Enter a number from 1 to 50: ")
         if guess.isdigit():
@@ -106,6 +107,7 @@ def level_two():
             if response != 'Y':
                 quit()
             if response == 'Y':
+                lives=3
                 starting_game()
     
 def level_three():
