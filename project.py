@@ -6,7 +6,7 @@ import time
 def time_convert(sec):
         mins = sec // 60
         sec = sec % 60
-        print("Time Lapsed = {0}:{1}".format(int(mins),sec))
+        print("Time it took to complete= {0}:{1}".format(int(mins),sec))
 
 start= input("Press Enter to start the timer")
 start_time = time.time()
@@ -262,7 +262,7 @@ def level_five():
             print("You win!")
             lives += 1
             break
-        elif guess % 2 == 0:
+        elif num5 % 2 == 0:
             lives -= 1
             print("lives:" +str(lives))
             reply = input("Do you want a hint? Y/N:")
