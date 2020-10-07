@@ -1,5 +1,4 @@
-print('Welcome! Try to guess the correct number to win the game!')
-print("For your first round, you get three chances to guess the correct number.")
+print('Welcome to the hardest game ever! Try to guess the correct number to win the game!')
 print('Win the level and win a life. Guess incorrect and its Game Over!')
 print("WARNING! THIS GAME IS EXTREMELY HARD.")
 import random
@@ -10,6 +9,7 @@ def level_one():
     """
     global lives
     print("☆ LEVEL ONE!☆")
+    print(" You have " +str(lives)+ ' lives left!' )
     while True:
         guess = input("Enter a number from 1 to 10: ")
         if guess.isdigit():
@@ -63,7 +63,7 @@ def level_two():
     """ 
     global lives
     print("☆ LEVEL TWO!☆")
-    lives += 1
+    print(" You have " +str(lives)+ ' lives left!' )
     while True:
         guess = input("Enter a number from 1 to 50: ")
         if guess.isdigit():
@@ -308,8 +308,9 @@ starting_game()
 while lives == 0:
 
     print("GAME OVER")
-    response = input("Do you want to play again? Y/N: ").lower
-    if response != 'y':
+    response = input("Do you want to play again? Y/N: ").upper
+    if response != 'Y':
         quit()
-    if response == 'y':
+    if response == 'Y':
+        lives = 3
         starting_game()
