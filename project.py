@@ -6,7 +6,7 @@ import time
 def time_convert(sec):
         mins = sec // 60
         sec = sec % 60
-        print("Time it took to complete= {0}:{1}".format(int(mins),sec))
+        print("Time Lapsed = {0}:{1}".format(int(mins),sec))
 
 start= input("Press Enter to start the timer")
 start_time = time.time()
@@ -268,8 +268,7 @@ def level_five():
             reply = input("Do you want a hint? Y/N:")
             if reply == 'Y':
                 print("The correct number is a divisible by 2! Try guessing lower!")
-            #if reply == 'N':
-                #lives += 1
+            
             while True:
                 guess = input("Enter a number from 1 to 1000: ")
                 if guess.isdigit():
@@ -278,17 +277,17 @@ def level_five():
                 else:
                     print("Please select a value of 0 or greater")
             
-        else: 
-            lives -= 1
-            print("lives:" +str(lives))
-            print("That number is too low! Try a higher number!")
-            while True:
-                guess = input("Enter a number from 1 to 1000: ")
-                if guess.isdigit():
-                    guess= int(guess)
-                    break
-                else:
-                    print("Please select a value of 0 or greater")
+            #else: 
+                #lives -= 1
+                #print("lives:" +str(lives))
+                #print("That number is too low! Try a higher number!")
+                #while True:
+                    #guess = input("Enter a number from 1 to 1000: ")
+                    #if guess.isdigit():
+                        #guess= int(guess)
+                        #break
+                    #else:
+                        #print("Please select a value of 0 or greater")
         
         while lives == 0:
             end_time = time.time()
