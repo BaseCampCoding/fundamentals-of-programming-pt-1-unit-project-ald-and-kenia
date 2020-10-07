@@ -47,7 +47,7 @@ def level_one():
                     print('Please select a value of 0 or greater')
 
         while lives == 0:
-            print("GAME OVER")
+            print("GAME OVER. The correct number was " +str(num1))
             response = input("Do you want to play again? Y/N: ")
             if response != 'Y':
                 quit()
@@ -100,7 +100,7 @@ def level_two():
 
 
         while lives == 0:
-            print("GAME OVER")
+            print("GAME OVER. The correct number was " +str(num2))
             response = input("Do you want to play again? Y/N: ")
             if response != 'Y':
                 quit()
@@ -153,7 +153,7 @@ def level_three():
                     print("Please select a value of 0 or greater")
 
         while lives == 0:
-            print("GAME OVER")
+            print("GAME OVER. The correct number was " +str(num3))
             response = input("Do you want to play again? Y/N: ")
             if response != 'Y':
                 quit()
