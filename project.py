@@ -1,14 +1,19 @@
-print('Welcome! Try to guess the correct number to win the game! \n ')
-print("For your first round, you get three chances to guess the correct number. \n")
-print('Win the level and win a life. Guess incorrect and its Game Over! \n ')
-print("WARNING! THIS GAME IS EXTREMELY HARD. \n ")
+import colorama
+from colorama import Fore, Style 
+colorama.init()
+print(Fore.LIGHTGREEN_EX +'Welcome! Try to guess the correct number to win the game! \n '+ Style.RESET_ALL)
+print(Fore.LIGHTMAGENTA_EX + "For your first round, you get three chances to guess the correct number. \n"+ Style.RESET_ALL)
+print(Fore.LIGHTGREEN_EX +'Win the level and win a life. Guess incorrect and its Game Over! \n '+ Style.RESET_ALL)
+print(Fore.RED +"WARNING! THIS GAME IS EXTREMELY HARD. \n " + Style.RESET_ALL)
 import time
+
+
 def time_convert(sec):
         mins = sec // 60
         sec = sec % 60
+        print("Time took to complete: ")
         print("Time Lapsed = {0}:{1}".format(int(mins),sec))
-
-start= input("Press Enter to start the timer")
+start= input(Fore.YELLOW+ "Press Enter to start the timer " + Style.RESET_ALL)
 start_time = time.time()
 
 
@@ -29,7 +34,7 @@ def level_one():
 
     """
     global lives
-    print("☆ LEVEL ONE!☆")
+    print(Fore.LIGHTMAGENTA_EX + "☆ LEVEL ONE!☆"+ Style.RESET_ALL)
     print(" You have " +str(lives)+ ' lives left!\n' )
     while True:
         guess = input("Enter a number from 1 to 10: ")
@@ -41,7 +46,7 @@ def level_one():
     num1=random.randint(1,10)
     while num1 in range(1,10):
         if guess == num1:
-            print("Correct! A life was added.")
+            print(Fore.LIGHTGREEN_EX +"Correct! A life was added." + Style.RESET_ALL)
             lives += 1
             break
         elif guess > num1 :
@@ -69,7 +74,7 @@ def level_one():
 
         while lives == 0:
             end_time = time.time()
-            print("GAME OVER. The correct number was " +str(num1))
+            print(Fore.RED+ "GAME OVER. The correct number was " +str(num1) +Style.RESET_ALL)
             time_lapsed = end_time - start_time
             time_convert(time_lapsed)
             response = input("Do you want to play again? Y/N: ")
@@ -91,7 +96,7 @@ def level_two():
     "Great job! a life was added!"
     """ 
     global lives
-    print("☆ LEVEL TWO!☆")
+    print(Fore.LIGHTMAGENTA_EX"☆ LEVEL TWO!☆"+ Style.RESET_ALL)
     print(" You have " +str(lives)+ ' lives left!\n' )
     while True:
         guess = input("Enter a number from 1 to 50: ")
@@ -170,7 +175,7 @@ def level_three():
             print("Great job!")
             lives += 1
             break
-        elif guess % 2 == 0:
+        elif num3 % 2 == 0:
             lives -= 1
             print("lives:" +str(lives))
             print("Hint: The correct number is even ! Take another shot! \n ")
@@ -347,6 +352,7 @@ def level_five():
                 
 
 def starting_game():
+    
     print("What level do you want to start at?")
     print("Level [1] - beginner, Level [2] - easy, Level [3] - intermediate, Level [4]- hard, Level [5] - extreme")
     start_level= input("> ")
@@ -383,7 +389,7 @@ starting_game()
 while lives == 0:
 
     print("GAME OVER")
-    response = input("Do you want to play again? Y/N: ").lower
+    response = input("Do you want to play again? Y/N: ").lower()
     if response != 'y':
         quit()
     if response == 'y':
