@@ -6,8 +6,8 @@ import time
 def time_convert(sec):
         mins = sec // 60
         sec = sec % 60
+        print("Time took to complete: ")
         print("Time Lapsed = {0}:{1}".format(int(mins),sec))
-
 start= input("Press Enter to start the timer")
 start_time = time.time()
 
@@ -306,6 +306,7 @@ def level_five():
                 
 
 def starting_game():
+    
     print("What level do you want to start at?")
     print("Level [1] - beginner, Level [2] - easy, Level [3] - intermediate, Level [4]- hard, Level [5] - extreme")
     start_level= input("> ")
