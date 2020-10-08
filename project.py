@@ -1,7 +1,7 @@
-print('Welcome! Try to guess the correct number to win the game!')
-print("For your first round, you get three chances to guess the correct number.")
-print('Win the level and win a life. Guess incorrect and its Game Over!')
-print("WARNING! THIS GAME IS EXTREMELY HARD.")
+print('Welcome! Try to guess the correct number to win the game! \n ')
+print("For your first round, you get three chances to guess the correct number. \n")
+print('Win the level and win a life. Guess incorrect and its Game Over! \n ')
+print("WARNING! THIS GAME IS EXTREMELY HARD. \n ")
 import time
 def time_convert(sec):
         mins = sec // 60
@@ -22,36 +22,35 @@ def level_one():
     print("☆ LEVEL ONE!☆")
     print(" You have " +str(lives)+ ' lives left!\n' )
     while True:
-        guess = input("\n Enter a number from 1 to 10:  ")
+        guess = input("Enter a number from 1 to 10: ")
         if guess.isdigit():
             guess= int(guess)
             break
         else:
-            print('Please select a value of 0 or greater\n')
+            print('Please select a value of 0 or greater')
     num1=random.randint(1,10)
     while num1 in range(1,10):
         if guess == num1:
             print("Correct! A life was added.")
-            
             lives += 1
             break
         elif guess > num1 :
             lives -= 1
             print("lives:" +str(lives))
-            print("Try again! Too high!")
+            print("Try again! Too high! \n ")
             while True:
-                guess = input("\n Enter a number from 1 to 10: ")
+                guess = input("Enter a number from 1 to 10: ")
                 if guess.isdigit():
                     guess= int(guess)
                     break
                 else:
-                    print("Please select a value of 0 or greater")
+                    print("Please select a value of 0 or greater \n ")
         else:
             lives -= 1
             print("lives:" +str(lives))
-            print("Try Again! Too low")
+            print("Try Again! Too low \n ")
             while True:
-                guess = input("Enter a number from 1 to 10: ")
+                guess = input("Enter a number from 1 to 10:  ")
                 if guess.isdigit():
                     guess= int(guess)
                     break 
@@ -77,14 +76,14 @@ def level_two():
     """ 
     global lives
     print("☆ LEVEL TWO!☆")
-    lives += 1
+    print(" You have " +str(lives)+ ' lives left!\n' )
     while True:
         guess = input("Enter a number from 1 to 50: ")
         if guess.isdigit():
             guess= int(guess)
             break
         else:
-            print('Please select a value of 0 or greater')
+            print('Please select a value of 0 or greater \n ')
     num2 = random.randint(1,50)
     while num2 in range(1,50):
         if guess == num2:
@@ -94,7 +93,7 @@ def level_two():
         elif guess > num2:
             lives -= 1
             print("lives:" +str(lives))
-            print("Too high! Take another shot!")
+            print("Too high! Take another shot! \n ")
             while True:
                 guess = input("Enter a number from 1 to 50: ")
                 if guess.isdigit():
@@ -105,7 +104,7 @@ def level_two():
         else: 
             lives -= 1
             print("lives:" +str(lives))
-            print("Too low! Try again")
+            print("Too low! Try again \n ")
             while True:
                 guess = input("Enter a number from 1 to 50: ")
                 if guess.isdigit():
@@ -132,8 +131,9 @@ def level_three():
 
     """ 
     global lives
-    print("☆ LEVEL THREE!☆")
-    print(" You have " +str(lives)+ ' lives left!' )
+    print("☆ LEVEL THREE!☆ \n ")
+    print("Just when you though this game was easy \n ")
+    print(" You have " +str(lives)+ ' lives left! \n ' )
     lives += 1
     while True:
         guess = input("Enter a number from 1 to 100: ")
@@ -144,14 +144,14 @@ def level_three():
             print('Please select a value of 0 or greater')
     num3 = random.randint(1,100)
     while num3 in range(1,100):
-        if num3 == num3:
+        if guess == num3:
             print("Great job!")
             lives += 1
             break
         elif guess % 2 == 0:
             lives -= 1
             print("lives:" +str(lives))
-            print("Hint: The correct number is even ! Take another shot!")
+            print("Hint: The correct number is even ! Take another shot! \n ")
             while True:
                 guess = input("Enter a number from 1 to 100: ")
                 if guess.isdigit():
@@ -163,7 +163,7 @@ def level_three():
         else: 
             lives -= 1
             print("lives:" +str(lives))
-            print("Hint: The correct number is odd. Try again")
+            print("Hint: The correct number is odd. Try again \n ")
             while True:
                 guess = input("Enter a number from 1 to 100: ")
                 if guess.isdigit():
@@ -172,7 +172,7 @@ def level_three():
                 else:
                     print("Please select a value of 0 or greater")
 
-        while lives == 0:
+        while lives <= 0:
             end_time = time.time()
             print("GAME OVER. The correct number was " +str(num3))
             time_lapsed = end_time - start_time
@@ -191,7 +191,7 @@ def level_four():
     """ 
     global lives
     print("☆ LEVEL FOUR!☆")
-    print(" You have " +str(lives)+ ' lives left!' )
+    print(" You have " +str(lives)+ ' lives left! \n ' )
     lives += 1
     while True:
         guess = input("Enter a number from 1 to 500: ")
@@ -199,7 +199,7 @@ def level_four():
             guess= int(guess)
             break
         else:
-            print('Please select a value of 0 or greater')
+            print('Please select a value of 0 or greater \n')
     num4 = random.randint(1,500)
     while num4 in range(1,500):
         if guess == num4:
@@ -209,7 +209,7 @@ def level_four():
         elif num4 % 2 == 0:
             lives -= 1
             print("lives:" +str(lives))
-            print("Hint: The correct number is even! Try guessing lower!")
+            print("Hint: The correct number is even! Try guessing lower! \n")
             while True:
                 guess = input("Enter a number from 1 to 500: ")
                 if guess.isdigit():
@@ -220,7 +220,7 @@ def level_four():
         else: 
             lives -= 1
             print("lives:" +str(lives))
-            print("The correct number is odd! Try a higher number!")
+            print("Hint: The correct number is odd! Try a higher number! \n ")
             while True:
                 guess = input("Enter a number from 1 to 500: ")
                 if guess.isdigit():
@@ -247,7 +247,7 @@ def level_five():
     """ 
     global lives
     print("☆ LEVEL FIVE!☆")
-    print(" You have " +str(lives)+ ' lives left!' )
+    print(" You have " +str(lives)+ ' lives left! \n ' )
     lives += 1
     while True:
         guess = input("Enter a number from 1 to 1000: ")
@@ -267,7 +267,21 @@ def level_five():
             print("lives:" +str(lives))
             reply = input("Do you want a hint? Y/N:")
             if reply == 'Y':
-                print("The correct number is a divisible by 2! Try guessing lower!")
+                print("The correct number is a divisible by 2! Try guessing lower! \n ")
+            
+            while True:
+                guess = input("Enter a number from 1 to 1000: ")
+                if guess.isdigit():
+                    guess= int(guess)
+                    break
+                else:
+                    print("Please select a value of 0 or greater")
+        elif num5 % 3 == 0:
+            lives -= 1
+            print("lives:" +str(lives))
+            reply = input("Do you want a hint? Y/N:")
+            if reply == 'Y':
+                print("The correct number is a divisible by 3! Try guessing lower! \n ")
             
             while True:
                 guess = input("Enter a number from 1 to 1000: ")
@@ -277,17 +291,6 @@ def level_five():
                 else:
                     print("Please select a value of 0 or greater")
             
-            #else: 
-                #lives -= 1
-                #print("lives:" +str(lives))
-                #print("That number is too low! Try a higher number!")
-                #while True:
-                    #guess = input("Enter a number from 1 to 1000: ")
-                    #if guess.isdigit():
-                        #guess= int(guess)
-                        #break
-                    #else:
-                        #print("Please select a value of 0 or greater")
         
         while lives == 0:
             end_time = time.time()
