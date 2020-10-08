@@ -15,7 +15,17 @@ start_time = time.time()
 import random
 lives=3
 def level_one():
-    """ 
+    """ (int) -> int:
+    return whether the player wins or loses or continues to the next level based on their input
+
+    >>> ("Enter a number from 1 to 10: 4")
+    "Try again! too low."
+
+    >>> ("Enter a number from 1 to 10: 6")
+    "Try again! Too high."
+
+    >>> ("Enter a number from 1 to 10: 5")
+    "Correct! a life was added."
 
     """
     global lives
@@ -70,10 +80,16 @@ def level_one():
                 lives = 3
                 starting_game()
 
-
 def level_two():
     """ (int) -> int:
+     return whether the player wins or loses or continues to the next level based on their input
 
+    >>> ("Enter a number from 1 to 50: 30")
+    "Too low! try again"
+    >>> ("Enter a number from 1 to 50: 50")
+    "Too high! take another shot!"
+    >>> ("Enter a number from 1 to 50: 40")
+    "Great job! a life was added!"
     """ 
     global lives
     print("☆ LEVEL TWO!☆")
@@ -129,7 +145,13 @@ def level_two():
     
 def level_three():
     """ (int) -> int:
+    return whether the player wins or loses or continues to the next level based on their input
 
+    >>> ("Enter a number from 1 to 100: 60")
+    "The correct number is odd. Try again"
+
+    >>>("Enter a number from 1 to 100: 65")
+    "Great job!
     """ 
     global lives
     print("☆ LEVEL THREE!☆")
@@ -186,8 +208,17 @@ def level_three():
 
             
 def level_four():
-    """ (int) -> int:
+    """ (int) -> int: 
+    return whether the player wins or loses or continues to the next level based on their input
 
+    >>> ("Enter a number from 1 to 500: 250")
+    "Hint: the correct number is even! Try guessing lower!"
+
+    >>> ("Enter a number from 1 to 500: 200")
+    "The correct number is odd! Try a higher number!"
+
+    >>>("Enter a number from 1 to 500: 225")
+    "Awesome job! A life was added"
     """ 
     global lives
     print("☆ LEVEL FOUR!☆")
@@ -243,6 +274,13 @@ def level_four():
                 
 def level_five():
     """ (int) -> int:
+    return whether the player wins or loses or continues to the next level based on their input
+
+    >>>("Enter a number from 1 to 1000: 566")
+    "The correct number is divisible by 2! Try guessing lower.
+
+    >>>("Enter a number from 1 to 1000: 500")
+    ("You win!")
 
     """ 
     global lives
@@ -259,7 +297,7 @@ def level_five():
     num5 = random.randint(1,1000)
     while num5 in range(1,1000):
         if guess == num5:
-            print("You win!")
+            print("✰ You win!✰")
             lives += 1
             break
         elif num5 % 2 == 0:
