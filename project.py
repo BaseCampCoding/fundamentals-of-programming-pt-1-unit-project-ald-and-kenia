@@ -74,13 +74,17 @@ def level_one():
             print(Fore.RED+ "GAME OVER. The correct number was " +str(num1) +Style.RESET_ALL)
             time_lapsed = end_time - start_time
             time_convert(time_lapsed)
-            response = input("Do you want to play again? Y/N: ")
-            if response != 'Y':
-                quit()
-            if response == 'Y':
-                lives = 3
-                starting_game()
-
+            response = input("Do you want to play again? Y/N: ").upper()
+            while True:
+                if response == 'N':
+                    quit()
+                if response == 'Y':
+                    lives = 3
+                    starting_game()
+                    break
+                else:
+                    print("please add a valid input")
+                    response = input("Do you want to play again? Y/N: ").upper()
 def level_two():
     """ (int) -> int:
      return whether the player wins or loses or continues to the next level based on their input
@@ -137,12 +141,17 @@ def level_two():
             print("GAME OVER. The correct number was " +str(num2))
             time_lapsed = end_time - start_time
             time_convert(time_lapsed)
-            response = input("Do you want to play again? Y/N: ")
-            if response != 'Y':
-                quit()
-            if response == 'Y':
-                lives = 3
-                starting_game()
+            response = input("Do you want to play again? Y/N: ").upper()
+            while True:
+                if response == 'N':
+                    quit()
+                if response == 'Y':
+                    lives = 3
+                    starting_game()
+                    break
+                else:
+                    print("please add a valid input")
+                    response = input("Do you want to play again? Y/N: ").upper()
     
 def level_three():
     """ (int) -> int:
@@ -201,11 +210,16 @@ def level_three():
             print("GAME OVER. The correct number was " +str(num3))
             time_lapsed = end_time - start_time
             time_convert(time_lapsed)
-            response = input("Do you want to play again? Y/N: ")
-            if response != 'Y':
-                quit()
-            if response == 'Y':
-                starting_game()
+            response = input("Do you want to play again? Y/N: ").upper()
+            while True:
+                if response == 'N':
+                    quit()
+                if response == 'Y':
+                    starting_game()
+                    break
+                else:
+                    print("please add a valid input")
+                    response = input("Do you want to play again? Y/N: ").upper()
                 
 
             
@@ -268,14 +282,16 @@ def level_four():
             time_lapsed = end_time - start_time
             time_convert(time_lapsed)
             response = input("Do you want to play again? Y/N: ").upper()
-            if response == 'N':
-                quit()
-            if response == 'Y':
-                lives = 3
-                starting_game()
-            else:
-                print("please add a valid input")
-                response = input("Do you want to play again? Y/N: ").upper()
+            while True:
+                if response == 'N':
+                    quit()
+                if response == 'Y':
+                    lives = 3
+                    starting_game()
+                    break
+                else:
+                    print("please add a valid input")
+                    response = input("Do you want to play again? Y/N: ").upper()
                 
 def level_five():
     """ (int) -> int:
@@ -308,9 +324,14 @@ def level_five():
         elif num5 % 2 == 0:
             lives -= 1
             print("lives:" +str(lives))
-            reply = input("Do you want a hint? Y/N:")
-            if reply == 'Y':
-                print("The correct number is a divisible by 2! Try guessing lower! \n ")
+            while True:
+                reply = input("Do you want a hint? Y/N:").upper()
+                if reply == 'Y':
+                    print("The correct number is a divisible by 2! Try guessing lower! \n ")
+                    break
+                else:
+                    print("please add valid input")
+                    reply = input("Do you want a hint? Y/N:")
             
             while True:
                 guess = input("Enter a number from 1 to 1000: ")
@@ -322,10 +343,14 @@ def level_five():
         elif num5 % 3 == 0:
             lives -= 1
             print("lives:" +str(lives))
-            reply = input("Do you want a hint? Y/N:")
-            if reply == 'Y':
-                print("The correct number is a divisible by 3! Try guessing lower! \n ")
-            
+            while True:
+                reply = input("Do you want a hint? Y/N:")
+                if reply == 'Y':
+                    print("The correct number is a divisible by 3! Try guessing lower! \n ")
+                else:
+                    print("please add valid input")
+                    reply = input("Do you want a hint? Y/N:").upper()
+
             while True:
                 guess = input("Enter a number from 1 to 1000: ")
                 if guess.isdigit():
@@ -341,12 +366,16 @@ def level_five():
             time_lapsed = end_time - start_time
             time_convert(time_lapsed)
             response = input("Do you want to play again? Y/N: ")
-            if response != 'Y':
-                quit()
-            if response == 'Y':
-                lives = 3
-                starting_game()
-                
+            while True:
+                if response == 'N':
+                    quit()
+                if response == 'Y':
+                    lives = 3
+                    starting_game()
+                    break
+                else:
+                    print("please add a valid input")
+                    response = input("Do you want to play again? Y/N: ")
 
 def starting_game():
     
