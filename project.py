@@ -265,12 +265,15 @@ def level_four():
             print("GAME OVER. The correct number was " +str(num4))
             time_lapsed = end_time - start_time
             time_convert(time_lapsed)
-            response = input("Do you want to play again? Y/N: ")
-            if response != 'Y':
+            response = input("Do you want to play again? Y/N: ").upper()
+            if response == 'N':
                 quit()
             if response == 'Y':
                 lives = 3
                 starting_game()
+            else:
+                print("please add a valid input")
+                response = input("Do you want to play again? Y/N: ").upper()
                 
 def level_five():
     """ (int) -> int:
