@@ -333,6 +333,7 @@ def level_five():
             break
         if num5 % 2 == 0:
             lives -= 1
+            print("Incorrect")
             print("lives:" +str(lives))
             while True:
                 reply = input("Do you want a hint? Y/N:").upper()
@@ -352,6 +353,7 @@ def level_five():
                     print("Please select a value of 0 or greater")
         elif num5 % 3 == 0:
             lives -= 1
+            print("Incorrect")
             print("lives:" +str(lives))
             while True:
                 reply = input("Do you want a hint? Y/N:")
@@ -370,6 +372,7 @@ def level_five():
                     print("Please select a value of 0 or greater")
         elif num5 % 5 == 0:
             lives -= 1
+            print("Incorrect")
             print("lives:" +str(lives))
             reply = input("Do you want a hint? Y/N:")
             if reply == 'Y':
