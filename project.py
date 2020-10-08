@@ -108,7 +108,7 @@ def level_two():
     num2 = random.randint(1,50)
     while num2 in range(1,50):
         if guess == num2:
-            print("Great job! A life was added")
+            print(Fore.LIGHTGREEN_EX + "Great job! A life was added"+ Style.RESET_ALL)
             lives+=1
             break
         elif guess > num2:
