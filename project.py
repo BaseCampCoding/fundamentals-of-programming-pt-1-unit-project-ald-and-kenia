@@ -96,7 +96,7 @@ def level_two():
     "Great job! a life was added!"
     """ 
     global lives
-    print(Fore.LIGHTMAGENTA_EX"☆ LEVEL TWO!☆"+ Style.RESET_ALL)
+    print(Fore.LIGHTMAGENTA_EX +"☆ LEVEL TWO!☆"+ Style.RESET_ALL)
     print(" You have " +str(lives)+ ' lives left!\n' )
     while True:
         guess = input("Enter a number from 1 to 50: ")
