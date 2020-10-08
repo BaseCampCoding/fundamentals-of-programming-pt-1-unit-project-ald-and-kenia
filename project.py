@@ -1,5 +1,5 @@
 import colorama
-from colorama import Fore, Style 
+from colorama import Fore, Style, Back 
 colorama.init()
 print(Fore.LIGHTGREEN_EX +'Welcome! Try to guess the correct number to win the game! \n '+ Style.RESET_ALL)
 print(Fore.LIGHTMAGENTA_EX + "For your first round, you get three chances to guess the correct number. \n"+ Style.RESET_ALL)
@@ -10,8 +10,8 @@ import time
 def time_convert(sec):
         mins = sec // 60
         sec = sec % 60
-        print("Time took to complete: ")
-        print("Time Lapsed = {0}:{1}".format(int(mins),sec))
+        print(Fore.LIGHTCYAN_EX +"Time took to complete: "+ Style.RESET_ALL)
+        print(Fore.BLACK +"Time Lapsed = {0}:{1}".format(int(mins),sec)+ Style.RESET_ALL)
 start= input(Fore.YELLOW+ "Press Enter to start the timer " + Style.RESET_ALL)
 start_time = time.time()
 import random
@@ -37,11 +37,13 @@ def level_one():
         guess = input("Enter a number from 1 to 10: ")
         if guess.isdigit():
             guess= int(guess)
-            break
-        else:
-            print('Please select a value of 0 or greater')
+            if guess <= 10:
+                break
+            else:
+                print('Please enter a number from 1 to 10')
     num1=random.randint(1,10)
     while num1 in range(1,10):
+
         if guess == num1:
             print(Fore.LIGHTGREEN_EX +"Correct! A life was added." + Style.RESET_ALL)
             lives += 1
@@ -103,9 +105,11 @@ def level_two():
         guess = input("Enter a number from 1 to 50: ")
         if guess.isdigit():
             guess= int(guess)
-            break
-        else:
-            print('Please select a value of 0 or greater \n ')
+            if guess <= 50:
+                break
+            else:
+                print('Please enter a number from 1 to 50')
+            
     num2 = random.randint(1,50)
     while num2 in range(1,50):
         if guess == num2:
@@ -138,7 +142,7 @@ def level_two():
 
         while lives == 0:
             end_time = time.time()
-            print("GAME OVER. The correct number was " +str(num2))
+            print(Fore.RED +"GAME OVER. The correct number was " +str(num2) + Style.RESET_ALL)
             time_lapsed = end_time - start_time
             time_convert(time_lapsed)
             response = input("Do you want to play again? Y/N: ").upper()
@@ -164,21 +168,23 @@ def level_three():
     "Great job!
     """ 
     global lives
-    print("☆ LEVEL THREE!☆ \n ")
-    print("Just when you though this game was easy \n ")
+    print(Fore.LIGHTMAGENTA_EX +"☆ LEVEL THREE!☆  " + Style.RESET_ALL)
+    print(Fore.RED +"Just when you though this game was easy \n " + Style.RESET_ALL)
     print(" You have " +str(lives)+ ' lives left! \n ' )
     lives += 1
     while True:
         guess = input("Enter a number from 1 to 100: ")
         if guess.isdigit():
             guess= int(guess)
-            break
-        else:
-            print('Please select a value of 0 or greater')
+            if guess <= 100:
+                break
+            else:
+                print('Please enter a number from 1 to 100 \n')
+            
     num3 = random.randint(1,100)
     while num3 in range(1,100):
         if guess == num3:
-            print("Great job!")
+            print(Fore.LIGHTGREEN_EX +"Great job! A life was added" + Style.RESET_ALL)
             lives += 1
             break
         elif num3 % 2 == 0:
@@ -207,7 +213,7 @@ def level_three():
 
         while lives <= 0:
             end_time = time.time()
-            print("GAME OVER. The correct number was " +str(num3))
+            print(Fore.RED + "GAME OVER. The correct number was " +str(num3) + Style.RESET_ALL)
             time_lapsed = end_time - start_time
             time_convert(time_lapsed)
             response = input("Do you want to play again? Y/N: ").upper()
@@ -237,20 +243,22 @@ def level_four():
     "Awesome job! A life was added"
     """ 
     global lives
-    print("☆ LEVEL FOUR!☆")
+    print(Fore.LIGHTMAGENTA_EX +"☆ LEVEL FOUR!☆"+ Style.RESET_ALL)
     print(" You have " +str(lives)+ ' lives left! \n ' )
     lives += 1
     while True:
         guess = input("Enter a number from 1 to 500: ")
         if guess.isdigit():
             guess= int(guess)
-            break
-        else:
-            print('Please select a value of 0 or greater \n')
+            if guess <= 500:
+                break
+            else:
+                print('Please enter a number from 1 to 500 \n ')
+            
     num4 = random.randint(1,500)
     while num4 in range(1,500):
         if guess == num4:
-            print("Awesome job! A life was added")
+            print(Fore.LIGHTGREEN_EX +"Awesome job! A life was added"+ Style.RESET_ALL)
             lives += 1
             break
         elif num4 % 2 == 0:
@@ -278,7 +286,7 @@ def level_four():
 
         while lives == 0:
             end_time = time.time()
-            print("GAME OVER. The correct number was " +str(num4))
+            print(Fore.RED +"GAME OVER. The correct number was " +str(num4)+ Style.RESET_ALL)
             time_lapsed = end_time - start_time
             time_convert(time_lapsed)
             response = input("Do you want to play again? Y/N: ").upper()
@@ -305,23 +313,25 @@ def level_five():
 
     """ 
     global lives
-    print("☆ LEVEL FIVE!☆")
+    print(Fore.LIGHTMAGENTA_EX+"☆ LEVEL FIVE!☆"+ Style.RESET_ALL)
     print(" You have " +str(lives)+ ' lives left! \n ' )
     lives += 1
     while True:
         guess = input("Enter a number from 1 to 1000: ")
         if guess.isdigit():
             guess= int(guess)
-            break
-        else:
-            print('Please select a value of 0 or greater')
+            if guess <= 1000:
+                break
+            else:
+                print('Please enter a number from 1 to 1000 \n ')
+           
     num5 = random.randint(1,1000)
     while num5 in range(1,1000):
         if guess == num5:
-            print("✰ You win!✰")
+            print(Fore.YELLOW +"✰ You win!✰" + Style.RESET_ALL)
             lives += 1
             break
-        elif num5 % 2 == 0:
+        if num5 % 2 == 0:
             lives -= 1
             print("lives:" +str(lives))
             while True:
@@ -358,11 +368,24 @@ def level_five():
                     break
                 else:
                     print("Please select a value of 0 or greater")
-            
+        elif num5 % 5 == 0:
+            lives -= 1
+            print("lives:" +str(lives))
+            reply = input("Do you want a hint? Y/N:")
+            if reply == 'Y':
+                print("The correct number is a divisible by 5! Try guessing lower! \n ")
+            while True:
+                guess = input("Enter a number from 1 to 1000: ")
+                if guess.isdigit():
+                    guess= int(guess)
+                    break
+                else:
+                    print("Please select a value of 0 or greater")
+     
         
         while lives == 0:
             end_time = time.time()
-            print("GAME OVER. The correct number was " +str(num5))
+            print(Fore.RED +"GAME OVER. The correct number was " +str(num5)+ Style.RESET_ALL)
             time_lapsed = end_time - start_time
             time_convert(time_lapsed)
             response = input("Do you want to play again? Y/N: ")
@@ -378,18 +401,22 @@ def level_five():
                     response = input("Do you want to play again? Y/N: ")
 
 def starting_game():
-    
+
     print("What level do you want to start at?")
     print("Level [1] - beginner, Level [2] - easy, Level [3] - intermediate, Level [4]- hard, Level [5] - extreme")
-    start_level= input("> ")
+    
     while True:
+        start_level= input("> ")
         if start_level.isdigit():
             start_level= int(start_level)
-            break
+            if start_level <6:
+                break 
+            else:
+                print("Enter a level from 1 to 5 ")
         else:
             print("Please enter a digit")
             print("Level [1] - beginner, Level [2] - easy, Level [3] - intermediate, Level [4]- hard, Level [5] - extreme")
-            start_level= input("> ")
+        
     if start_level == 1:
         level_one()
         level_two()
