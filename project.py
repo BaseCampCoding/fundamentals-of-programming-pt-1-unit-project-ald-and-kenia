@@ -7,7 +7,6 @@ print(Fore.LIGHTGREEN_EX +'Win the level and win a life. Guess incorrect and its
 print(Fore.RED +"WARNING! THIS GAME IS EXTREMELY HARD. \n " + Style.RESET_ALL)
 import time
 
-
 def time_convert(sec):
         mins = sec // 60
         sec = sec % 60
@@ -15,8 +14,6 @@ def time_convert(sec):
         print("Time Lapsed = {0}:{1}".format(int(mins),sec))
 start= input(Fore.YELLOW+ "Press Enter to start the timer " + Style.RESET_ALL)
 start_time = time.time()
-
-
 import random
 lives=3
 def level_one():
