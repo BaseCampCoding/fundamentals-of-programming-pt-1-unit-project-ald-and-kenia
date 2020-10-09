@@ -331,21 +331,16 @@ def level_five():
             print(Fore.YELLOW +"✰ You win!✰" + Style.RESET_ALL)
             lives += 1
             break
-            while True:
-                guess = input("Enter a number from 1 to 1000: ")
-                if guess.isdigit():
-                    guess= int(guess)
-                    break
-                else:
-                    print("Please select a value of 0 or greater")
-        if num5 % 2 == 0:
+        if guess > num5:
             lives -= 1
             print("Incorrect")
             print("lives:" +str(lives))
             while True:
                 reply = input("Do you want a hint? Y/N:").upper()
                 if reply == 'Y':
-                    print("The correct number is a divisible by 2! Try guessing lower! \n ")
+                    print("Too high! Try guessing lower! \n ")
+                    break
+                elif reply == 'N':
                     break
                 else:
                     print("please add valid input")
@@ -358,17 +353,23 @@ def level_five():
                     break
                 else:
                     print("Please select a value of 0 or greater")
-        if num5 % 3 == 0:
+        elif guess < num5:
             lives -= 1
             print("Incorrect")
             print("lives:" +str(lives))
             while True:
                 reply = input("Do you want a hint? Y/N:")
+                reply = reply.upper()
                 if reply == 'Y':
-                    print("The correct number is a divisible by 3! Try guessing lower! \n ")
+                    print("Too low! Try guessing higher! \n ")
+                    break
+                elif reply == 'N':
+                    break
                 else:
                     print("please add valid input")
-                    reply = input("Do you want a hint? Y/N:").upper()
+                    reply = input("Do you want a hint? Y/N:")
+                    reply = reply.upper()
+
             while True:
                 guess = input("Enter a number from 1 to 1000: ")
                 if guess.isdigit():
@@ -376,8 +377,8 @@ def level_five():
                     break
                 else:
                     print("Please select a value of 0 or greater")
-            
-        
+    
+
         
         while lives == 0:
             end_time = time.time()
