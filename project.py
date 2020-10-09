@@ -370,21 +370,7 @@ def level_five():
                     break
                 else:
                     print("Please select a value of 0 or greater")
-        elif num5 % 5 == 0:
-            lives -= 1
-            print("Incorrect")
-            print("lives:" +str(lives))
-            reply = input("Do you want a hint? Y/N:")
-            if reply == 'Y':
-                print("The correct number is a divisible by 5! Try guessing lower! \n ")
-            while True:
-                guess = input("Enter a number from 1 to 1000: ")
-                if guess.isdigit():
-                    guess= int(guess)
-                    break
-                else:
-                    print("Please select a value of 0 or greater")
-     
+        
         
         while lives == 0:
             end_time = time.time()
