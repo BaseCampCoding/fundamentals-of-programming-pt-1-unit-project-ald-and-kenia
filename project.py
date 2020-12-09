@@ -22,7 +22,7 @@ def level_one():
 
     >>> ("Enter a number from 1 to 10: 4")
     "Try again! too low."
-
+ 
     >>> ("Enter a number from 1 to 10: 6")
     "Try again! Too high."
 
@@ -264,7 +264,7 @@ def level_four():
         elif num4 % 2 == 0:
             lives -= 1
             print("lives:" +str(lives))
-            print("Hint: The correct number is even! Try guessing lower! \n")
+            print("Hint: The correct number is even!" )
             while True:
                 guess = input("Enter a number from 1 to 500: ")
                 if guess.isdigit():
@@ -275,7 +275,7 @@ def level_four():
         else: 
             lives -= 1
             print("lives:" +str(lives))
-            print("Hint: The correct number is odd! Try a higher number! \n ")
+            print("Hint: The correct number is odd! \n ")
             while True:
                 guess = input("Enter a number from 1 to 500: ")
                 if guess.isdigit():
@@ -338,7 +338,7 @@ def level_five():
             while True:
                 reply = input("Do you want a hint? Y/N:").upper()
                 if reply == 'Y':
-                    print("Too high! Try guessing lower! \n ")
+                    print("Too low! Try guessing lower! \n ")
                     break
                 elif reply == 'N':
                     break
@@ -361,7 +361,7 @@ def level_five():
                 reply = input("Do you want a hint? Y/N:")
                 reply = reply.upper()
                 if reply == 'Y':
-                    print("Too low! Try guessing higher! \n ")
+                    print("Too High! Try guessing higher! \n ")
                     break
                 elif reply == 'N':
                     break
