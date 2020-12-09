@@ -1,19 +1,15 @@
 import colorama
 from colorama import Fore, Style, Back 
 colorama.init()
-print(Fore.LIGHTGREEN_EX +'Welcome! Try to guess the correct number to win the game! \n '+ Style.RESET_ALL)
-print(Fore.LIGHTMAGENTA_EX + "For your first round, you get three chances to guess the correct number. \n"+ Style.RESET_ALL)
-print(Fore.LIGHTGREEN_EX +'Win the level and win a life. Guess incorrect and its Game Over! \n '+ Style.RESET_ALL)
-print(Fore.RED +"WARNING! THIS GAME IS EXTREMELY HARD. \n " + Style.RESET_ALL)
-import time
+# import time
 
-def time_convert(sec):
-        mins = sec // 60
-        sec = sec % 60
-        print(Fore.LIGHTCYAN_EX +"Time took to complete: "+ Style.RESET_ALL)
-        print(Fore.BLACK +"Time Lapsed = {0}:{1}".format(int(mins),sec)+ Style.RESET_ALL)
-start= input(Fore.YELLOW+ "Press Enter to start the timer " + Style.RESET_ALL)
-start_time = time.time()
+# def time_convert(sec):
+#         mins = sec // 60
+#         sec = sec % 60
+#         print(Fore.LIGHTCYAN_EX +"Time took to complete: "+ Style.RESET_ALL)
+#         print(Fore.BLACK +"Time Lapsed = {0}:{1}".format(int(mins),sec)+ Style.RESET_ALL)
+# start= input(Fore.YELLOW+ "Press Enter to start the timer " + Style.RESET_ALL)
+# start_time = time.time()
 import random
 lives=3
 def level_one():
